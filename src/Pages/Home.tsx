@@ -2,6 +2,17 @@
 import { motion } from "framer-motion"
 import img from "../assets/my_image.jpg"
 import img2 from "../assets/drawing.png"
+import html from "../assets/html.png"
+import css from "../assets/css.png"
+import js from "../assets/js.png"
+import ts from "../assets/ts.png"
+import react from "../assets/react.png"
+import redux from "../assets/redux.png"
+import nextjs from "../assets/nextjs.png"
+import nodejs from "../assets/nodejs.png"
+import python from "../assets/python.png"
+import django from "../assets/django.svg"
+import flask from "../assets/flask.png"
 import purpledots from "../assets/purple-dot-box.png"
 import clsx from "clsx"
 import { useEffect, useState } from "react"
@@ -20,17 +31,17 @@ function Home() {
   const colors = ["", "white", "blue", "white"]
 
   const technologies = [
-    {url: "/src/assets/html.png", language: "Html"},
-    {url: "/src/assets/css.png", language: "Css"},
-    {url: "/src/assets/js.png", language: "Javascript"},
-    {url: "/src/assets/ts.png", language: "Typescript"},
-    {url: "/src/assets/react.png", language: "React"},
-    {url: "/src/assets/redux.png", language: "Redux"},
-    {url: "/src/assets/nextjs.png", language: "Next"},
-    {url: "/src/assets/nodejs.png", language: "NodeJs"},
-    {url: "/src/assets/python.png", language: "Python"},
-    {url: "/src/assets/django.svg", language: "Django"},
-    {url: "/src/assets/flask.png", language: "Flask"},
+    {url: html, language: "Html"},
+    {url: css, language: "Css"},
+    {url: js, language: "Javascript"},
+    {url: ts, language: "Typescript"},
+    {url: react, language: "React"},
+    {url: redux, language: "Redux"},
+    {url: nextjs, language: "Next"},
+    {url: nodejs, language: "NodeJs"},
+    {url: python, language: "Python"},
+    {url: django, language: "Django"},
+    {url: flask, language: "Flask"},
   ]
   
   window.addEventListener("scroll", () => {
@@ -45,8 +56,8 @@ function Home() {
   useEffect(() => {
 
     setColor(colors[0]);
-    // setPage(1);
-    // window.scroll({top: 0, behavior: "smooth"}) 
+    setPage(1);
+    window.scroll({top: 0, behavior: "smooth"}) 
     const sections = document.querySelectorAll("section")
     const button = document.querySelectorAll("#button")
     button.forEach((btn, i) => {
@@ -165,7 +176,7 @@ function Home() {
     </section>
 
     <section className='w-[100vw] h-[100vh] bg-[#4831d4]'>
-      <div className="pt-[15%] lg:pt-[8%] text-gray-100 w-[80%] m-auto">
+      <div className="pt-[15%] lg:pt-[10%] text-gray-100 w-[80%] m-auto">
         <h1 className="text-3xl font-bold mb-2">TECHNOLOGIES</h1>
         <div className="grid grid-cols-4 md:grid-cols-5">
           {technologies.map((tech, i) => (
