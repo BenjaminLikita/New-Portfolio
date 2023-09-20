@@ -137,7 +137,7 @@ function Home() {
       <div className="bg-[#bff659d2] w-[100%] sm:w-[30%] h-[0%] sm:h-[100%] sm:relative flex z-[-2]">
         <img
         style={{filter: "contrast(1.5) brightness(.9)"}}
-        className="absolute top-0 sm:w-[85%] md:w-[70%] lg:w-[55%] w-[70%] h-[40%] sm:h-[45%] md:h-[40%] lg:h-[45%] ml-[5%] sm:ml-[-30%] mt-2 sm:mt-[50%] lg:mt-[40%] translate-x-[15%] translate-y-[80%] sm:translate-x-0 sm:translate-y-0 z-10"
+        className="absolute top-0 sm:w-[85%] md:w-[70%] lg:w-[55%] w-[55%] h-[30%] sm:h-[45%] md:h-[40%] lg:h-[45%] ml-[5%] sm:ml-[-30%] mt-2 sm:mt-[50%] lg:mt-[40%] translate-x-[25%] translate-y-[110%] sm:translate-x-0 sm:translate-y-0 z-10"
         src={img} alt="" />
 
         <div
@@ -148,7 +148,7 @@ function Home() {
     </section>
 
 
-    <section className='w-[100vw] h-[50vh] sm:h-[75vh] md:h-[100vh] bg-white'>
+    <section className='w-[100vw] h-[65vh] sm:h-[75vh] md:h-[100vh] bg-white'>
       <div className="w-[70%] md:w-[80%] flex flex-col translate-x-[15%] translate-y-[15%] md:translate-y-[40%]">
         <div className="w-[100%] md:w-[50%]">
           <Reveal animate="slide-down">
@@ -175,7 +175,7 @@ function Home() {
       </div>
     </section>
 
-    <section className='w-[100vw] h-[65vh] sm:h-[100vh] bg-[#4831d4]'>
+    <section className='w-[100vw] h-[70vh] sm:h-[100vh] bg-[#4831d4]'>
       <div className="pt-[10%] md:pt-[5%] lg:pt-[10%] text-gray-100 w-[80%] m-auto">
         <h1 className="text-3xl font-bold mb-2">TECHNOLOGIES</h1>
         <div className="grid grid-cols-3 md:grid-cols-5">
