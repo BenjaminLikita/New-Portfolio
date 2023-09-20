@@ -115,8 +115,8 @@ function Home() {
       })}></div>
     </div>
 
-    <section className="w-[100vw] h-[130vh] sm:h-[90vh] md:h-[100vh] block sm:flex">
-      <div className="z-[-2] bg-[#4831d4] w-[100%] sm:w-[70%] h-[60%] sm:h-[100%] md:h-[100%] pt-[120px] md:pt-[150px] pl-[6%] text-5xl font-bold relative">
+    <section className="w-[100vw] h-[120vh] sm:h-[90vh] md:h-[100vh] block sm:flex">
+      <div className="z-[-2] bg-[#4831d4] w-[100%] sm:w-[70%] h-[70%] sm:h-[100%] md:h-[100%] pt-[120px] md:pt-[150px] pl-[6%] text-3xl md:text-5xl font-bold relative">
         <div className="w-[88%] m-auto">
           <Reveal animate="slide-left" >
             <div>
@@ -134,10 +134,10 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#bff659d2] w-[100%] sm:w-[30%] h-[40%] sm:h-[100%] relative flex z-[-2]">
+      <div className="bg-[#bff659d2] w-[100%] sm:w-[30%] h-[30%] sm:h-[100%] relative flex z-[-2]">
         <img
         style={{filter: "contrast(1.5) brightness(.9)"}}
-        className="sm:w-[85%] md:w-[70%] lg:w-[55%] w-[38%] h-[80%] sm:h-[45%] md:h-[40%] lg:h-[45%] ml-[5%] sm:ml-[-30%] mt-2 sm:mt-[50%] lg:mt-[40%] translate-x-[60%] translate-y-[10%] sm:translate-x-0 sm:translate-y-0 z-10"
+        className="sm:w-[85%] md:w-[70%] lg:w-[55%] w-[40%] h-[80%] sm:h-[45%] md:h-[40%] lg:h-[45%] ml-[5%] sm:ml-[-30%] mt-2 sm:mt-[50%] lg:mt-[40%] translate-x-[60%] translate-y-[10%] sm:translate-x-0 sm:translate-y-0 z-10"
         src={img} alt="" />
 
         <div
@@ -148,7 +148,7 @@ function Home() {
     </section>
 
 
-    <section className='w-[100vw] h-[75vh] md:h-[100vh] bg-white'>
+    <section className='w-[100vw] h-[90vh] sm:h-[75vh] md:h-[100vh] bg-white'>
       <div className="w-[70%] md:w-[80%] flex flex-col translate-x-[15%] translate-y-[15%] md:translate-y-[40%]">
         <div className="w-[100%] md:w-[50%]">
           <Reveal animate="slide-down">
@@ -163,7 +163,7 @@ function Home() {
             <h1 className="text-2xl md:text-4xl font-bold text-[#4831d4]">ENGINEERING</h1>
           </Reveal>
           <Reveal animate="slide-left">
-            <p className="text-sm lg:text-base leading-tight font-normal text-[#3D1558] mt-3">How to use Airbnb Market Data. Enter the zip code or city you are interested in researching. You'll get access to Airbnb market insights including occupancy rates, value of amenities, daily rates, and the opportunity to browse the best Airbnb's in the area to see what's making them outperform the competition.</p>
+            <p className="text-sm lg:text-base leading-tight font-normal text-[#3D1558] mt-3">My problem-solving skills, attention to detail, and technical expertise allow me to create robust and efficient solutions. I thrive on challenges and enjoy finding innovative ways to tackle complex problems. Let's engineer greatness together! 🛠️🚀.</p>
           </Reveal>
         </div>
         <img
@@ -175,8 +175,8 @@ function Home() {
       </div>
     </section>
 
-    <section className='w-[100vw] h-[100vh] bg-[#4831d4]'>
-      <div className="pt-[5%] lg:pt-[10%] text-gray-100 w-[80%] m-auto">
+    <section className='w-[100vw] h-[95vh] sm:h-[100vh] bg-[#4831d4]'>
+      <div className="pt-[10%] md:pt-[5%] lg:pt-[10%] text-gray-100 w-[80%] m-auto">
         <h1 className="text-3xl font-bold mb-2">TECHNOLOGIES</h1>
         <div className="grid grid-cols-3 md:grid-cols-5">
           {technologies.map((tech, i) => (
@@ -189,14 +189,14 @@ function Home() {
     <section className='w-[100vw] h-[80vh] md:h-[100vh] bg-gray-50'>
       <div className="bg-white p-20 py-16 translate-y-[10vh] md:translate-y-[20vh] w-[90%] m-auto text-[#3e3198] relative">
         
-        <div className=" md:h-[50vh] w-[80%] md:translate-x-[25%] md:translate-y-[25%] lg:translate-x-[35%] lg:translate-y-[20%]">
+        <div className=" md:h-[50vh] w-[100%] md:translate-x-[20%] md:translate-y-[25%] lg:translate-x-[30%] lg:translate-y-[20%]">
           <Reveal animate="slide-left">
-            <div>
-              <h1 className="text-[#3e3198] text-4xl font-bold mb-[10%]">I build & design stuff</h1>
-              <p>Open source projects, web apps and experimentals.</p>
+            <div className="w-[100%]">
+              <h1 className="text-[#3e3198] text-3xl md:text-4xl font-bold mb-[10%]">I build & design stuff</h1>
+              <p className="text-sm md:text-base">Open source projects, web apps and experimentals.</p>
               <Link
               to={""}
-              className="border-[#4831d4] group flex justify-center gap-5 items-center relative border px-8 py-4 mt-5 before:bg-[#4831d4] before:absolute before:w-[0%] before:h-[100%] before:top-0 before:left-0 hover:before:w-[100%] before:transition-all duration-500 before:duration-700 hover:text-white before:z-[-1] delay[10ms] font-semibold text-[#4831d4]"
+              className="border-[#4831d4] group flex justify-center text-xs md:text-base gap-5 items-center relative border px-8 py-4 mt-5 before:bg-[#4831d4] before:absolute before:w-[0%] before:h-[100%] before:top-0 before:left-0 hover:before:w-[100%] before:transition-all duration-500 before:duration-700 hover:text-white before:z-[-1] delay[10ms] font-semibold text-[#4831d4]"
               >SEE MY WORKS<BsArrowRight size={25}/>
               </Link>
             </div>
