@@ -56,8 +56,8 @@ function Home() {
   useEffect(() => {
 
     setColor(colors[0]);
-    // setPage(1);
-    // window.scroll({top: 0, behavior: "smooth"}) 
+    setPage(1);
+    window.scroll({top: 0, behavior: "smooth"}) 
     const sections = document.querySelectorAll("section")
     const button = document.querySelectorAll("#button")
     button.forEach((btn, i) => {
@@ -115,10 +115,10 @@ function Home() {
       })}></div>
     </div>
 
-    <section className="w-[100vw] h-[120vh] sm:h-[90vh] md:h-[100vh] block sm:flex">
+    <section className="w-[100vw] h-[110vh] sm:h-[90vh] md:h-[100vh] block sm:flex">
       <div className="z-[-2] bg-[#4831d4] w-[100%] sm:w-[70%] h-[70%] sm:h-[100%] md:h-[100%] pt-[120px] md:pt-[150px] pl-[6%] text-3xl md:text-5xl font-bold relative">
         <div className="w-[88%] m-auto">
-          <Reveal animate="slide-left" >
+          <Reveal animate="slide-left">
             <div>
               <h1 className="inline-block text-[#c8f279]">Full Stack <br/> Developer</h1><span className="text-white">.</span>
             </div>
@@ -137,7 +137,7 @@ function Home() {
       <div className="bg-[#bff659d2] w-[100%] sm:w-[30%] h-[30%] sm:h-[100%] relative flex z-[-2]">
         <img
         style={{filter: "contrast(1.5) brightness(.9)"}}
-        className="sm:w-[85%] md:w-[70%] lg:w-[55%] w-[40%] h-[80%] sm:h-[45%] md:h-[40%] lg:h-[45%] ml-[5%] sm:ml-[-30%] mt-2 sm:mt-[50%] lg:mt-[40%] translate-x-[60%] translate-y-[10%] sm:translate-x-0 sm:translate-y-0 z-10"
+        className="sm:w-[85%] md:w-[70%] lg:w-[55%] w-[40%] h-[80%] sm:h-[45%] md:h-[40%] lg:h-[45%] ml-[5%] sm:ml-[-30%] mt-2 sm:mt-[50%] lg:mt-[40%] translate-x-[62%] translate-y-[10%] sm:translate-x-0 sm:translate-y-0 z-10"
         src={img} alt="" />
 
         <div
