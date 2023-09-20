@@ -137,7 +137,7 @@ function Home() {
       <div className="bg-[#bff659d2] w-[100%] sm:w-[30%] h-[0%] sm:h-[100%] sm:relative flex z-[-2]">
         <img
         style={{filter: "contrast(1.5) brightness(.9)"}}
-        className="absolute top-0 sm:w-[85%] md:w-[70%] lg:w-[55%] w-[55%] h-[30%] sm:h-[45%] md:h-[40%] lg:h-[45%] ml-[5%] sm:ml-[-30%] mt-2 sm:mt-[50%] lg:mt-[40%] translate-x-[25%] translate-y-[110%] sm:translate-x-0 sm:translate-y-0 z-10"
+        className="absolute top-0 sm:w-[85%] md:w-[70%] lg:w-[55%] w-[55%] h-[35%] sm:h-[45%] md:h-[40%] lg:h-[45%] ml-[5%] sm:ml-[-30%] mt-2 sm:mt-[50%] lg:mt-[40%] translate-x-[30%] translate-y-[120%] sm:translate-x-0 sm:translate-y-0 z-10"
         src={img} alt="" />
 
         <div
@@ -175,7 +175,7 @@ function Home() {
       </div>
     </section>
 
-    <section className='w-[100vw] h-[70vh] sm:h-[100vh] bg-[#4831d4]'>
+    <section className='w-[100vw] h-[75vh] sm:h-[100vh] bg-[#4831d4]'>
       <div className="pt-[10%] md:pt-[5%] lg:pt-[10%] text-gray-100 w-[80%] m-auto">
         <h1 className="text-3xl font-bold mb-2">TECHNOLOGIES</h1>
         <div className="grid grid-cols-3 md:grid-cols-5">
@@ -186,7 +186,7 @@ function Home() {
       </div>
     </section>
 
-    <section className='w-[100vw] h-[45vh] sm:h-[60vh] md:h-[100vh] bg-gray-50'>
+    <section className='w-[100vw] h-[60vh] sm:h-[60vh] md:h-[100vh] bg-gray-50'>
       <div className="bg-white p-20 py-16 translate-y-[5vh] md:translate-y-[20vh] w-[90%] m-auto text-[#3e3198] relative">
         
         <div className=" md:h-[50vh] w-[100%] md:translate-x-[20%] md:translate-y-[25%] lg:translate-x-[30%] lg:translate-y-[20%]">
@@ -196,7 +196,7 @@ function Home() {
               <p className="text-sm md:text-base">Open source projects, web apps and experimentals.</p>
               <Link
               to={""}
-              className="border-[#4831d4] group flex justify-center text-xs md:text-base gap-5 items-center relative border px-8 py-4 mt-5 before:bg-[#4831d4] before:absolute before:w-[0%] before:h-[100%] before:top-0 before:left-0 hover:before:w-[100%] before:transition-all duration-500 before:duration-700 hover:text-white before:z-[-1] delay[10ms] font-semibold text-[#4831d4]"
+              className="border-[#4831d4] group flex justify-center text-xs md:text-base gap-5 items-center relative border px-3 sm:px-8 py-4 mt-5 before:bg-[#4831d4] before:absolute before:w-[0%] before:h-[100%] before:top-0 before:left-0 hover:before:w-[100%] before:transition-all duration-500 before:duration-700 hover:text-white before:z-[-1] delay[10ms] font-semibold text-[#4831d4]"
               >SEE MY WORKS<BsArrowRight size={25}/>
               </Link>
             </div>

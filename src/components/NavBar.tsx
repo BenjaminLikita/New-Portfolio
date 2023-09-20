@@ -27,11 +27,11 @@ function NavBar({color, page, small}: NavbarProps) {
     })}>
       <div className='w-[92%] md:w-[88%] m-auto'>
       <div className='flex justify-between items-center text-white'>
-        <h1 className={clsx('text-8xl fuggles font-bold name', {
+        <h1 className={clsx('text-6xl py-3 md:p-0 md:text-8xl fuggles font-bold name', {
           "text-[#4831d4]": page === 2 || page === 4,
           "text-[#c8f279]": page !== 2 && page !== 4,
         })}>
-          b<span className=' text-4xl'>enji</span>
+          b<span className='text-4xl md:text-4xl'>enji</span>
         </h1>
         <div
         onClick={() => {
