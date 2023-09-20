@@ -187,7 +187,7 @@ function Home() {
     </section>
 
     <section className='w-[100vw] h-[60vh] sm:h-[60vh] md:h-[100vh] bg-gray-50'>
-      <div className="bg-white p-20 py-16 translate-y-[5vh] md:translate-y-[20vh] w-[90%] m-auto text-[#3e3198] relative">
+      <div className="bg-white px-8 sm:p-20 py-16 translate-y-[5vh] md:translate-y-[20vh] w-[90%] m-auto text-[#3e3198] relative">
         
         <div className=" md:h-[50vh] w-[100%] md:translate-x-[20%] md:translate-y-[25%] lg:translate-x-[30%] lg:translate-y-[20%]">
           <Reveal animate="slide-left">
