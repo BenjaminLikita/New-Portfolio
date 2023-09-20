@@ -66,7 +66,7 @@ function NavBar({color, page, small}: NavbarProps) {
       </div>
       {
         click &&
-        <div className={clsx('fixed top-[10%] right-[4%] md:right-[6%] md:top-[16%] w-[80%] md:w-[90%] p-10 pt-8 md:text-sm text-[#4831DE] bg-white shadow-lg', {
+        <div className={clsx('fixed top-[10%] right-[4%] md:right-[6%] md:top-[16%] w-[80%] md:w-[28%] p-10 pt-8 md:text-sm text-[#4831DE] bg-white shadow-lg', {
           "fade-in": active,
           "fade-out": !active,
         })}>
