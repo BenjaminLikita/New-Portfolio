@@ -56,8 +56,8 @@ function Home() {
   useEffect(() => {
 
     setColor(colors[0]);
-    setPage(1);
-    window.scroll({top: 0, behavior: "smooth"}) 
+    // setPage(1);
+    // window.scroll({top: 0, behavior: "smooth"}) 
     const sections = document.querySelectorAll("section")
     const button = document.querySelectorAll("#button")
     button.forEach((btn, i) => {
@@ -115,7 +115,7 @@ function Home() {
       })}></div>
     </div>
 
-    <section className="w-[100vw] h-[150vh] sm:h-[90vh] md:h-[100vh] block sm:flex">
+    <section className="w-[100vw] h-[130vh] sm:h-[90vh] md:h-[100vh] block sm:flex">
       <div className="z-[-2] bg-[#4831d4] w-[100%] sm:w-[70%] h-[60%] sm:h-[100%] md:h-[100%] pt-[120px] md:pt-[150px] pl-[6%] text-5xl font-bold relative">
         <div className="w-[88%] m-auto">
           <Reveal animate="slide-left" >
@@ -134,10 +134,10 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#bff659d2] w-[100%] sm:w-[30%] h-[50%] sm:h-[100%] relative flex z-[-2]">
+      <div className="bg-[#bff659d2] w-[100%] sm:w-[30%] h-[40%] sm:h-[100%] relative flex z-[-2]">
         <img
         style={{filter: "contrast(1.5) brightness(.9)"}}
-        className="sm:w-[85%] md:w-[70%] lg:w-[55%] w-[30%] h-[50%] sm:h-[45%] md:h-[40%] lg:h-[45%] ml-[5%] sm:ml-[-30%] mt-2 sm:mt-[50%] lg:mt-[40%] translate-x-[90%] translate-y-[25%] sm:translate-x-0 sm:translate-y-0 z-10"
+        className="sm:w-[85%] md:w-[70%] lg:w-[55%] w-[38%] h-[80%] sm:h-[45%] md:h-[40%] lg:h-[45%] ml-[5%] sm:ml-[-30%] mt-2 sm:mt-[50%] lg:mt-[40%] translate-x-[60%] translate-y-[10%] sm:translate-x-0 sm:translate-y-0 z-10"
         src={img} alt="" />
 
         <div
@@ -149,7 +149,7 @@ function Home() {
 
 
     <section className='w-[100vw] h-[75vh] md:h-[100vh] bg-white'>
-      <div className="w-[70%] md:w-[80%] flex flex-col translate-x-[15%] translate-y-[25%] md:translate-y-[40%]">
+      <div className="w-[70%] md:w-[80%] flex flex-col translate-x-[15%] translate-y-[15%] md:translate-y-[40%]">
         <div className="w-[100%] md:w-[50%]">
           <Reveal animate="slide-down">
             <h1 className="text-2xl md:text-4xl font-bold text-[#4831d4]">DESIGN</h1>
@@ -176,9 +176,9 @@ function Home() {
     </section>
 
     <section className='w-[100vw] h-[100vh] bg-[#4831d4]'>
-      <div className="pt-[15%] lg:pt-[10%] text-gray-100 w-[80%] m-auto">
+      <div className="pt-[5%] lg:pt-[10%] text-gray-100 w-[80%] m-auto">
         <h1 className="text-3xl font-bold mb-2">TECHNOLOGIES</h1>
-        <div className="grid grid-cols-4 md:grid-cols-5">
+        <div className="grid grid-cols-3 md:grid-cols-5">
           {technologies.map((tech, i) => (
             <IconDiv key={i} url={tech.url} language={tech.language} delay={i / 15} />
           ))}
