@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+
+body{
+  background-color: rgb(32,33,36);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.fuggles{
+  font-family: 'Fuggles', cursive;
+}
+
+.fade-in-delay{
+  animation-delay: 500ms;
+  animation: fadeIn .5s ease-in-out 500ms;
+}
+.fade-in{
+  animation: fadeIn .5s ease-in-out;
+}
+
+.fade-out{
+  animation: fadeOut .5s ease-in-out;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut
+{
+  0%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
