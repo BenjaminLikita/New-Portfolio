@@ -1,6 +1,15 @@
+import NavBar from '@/components/NavBar'
 import { motion } from 'framer-motion'
 
-function About() {
+
+
+function Projects() {
+  const projLinks = [
+    {url: "/", text: "Home"},
+    {url: "/resume", text: "My Résumé"}
+  ]
+
+
   return (
     <motion.div
     className='w-[80%] m-auto'
@@ -8,10 +17,10 @@ function About() {
     animate={{ x: 0, opacity: 1 }}
     transition={{ duration: .8, type: "spring", bounce: .6 }}
     >
-        <h1>About Page</h1>
+      <NavBar links={projLinks}/>
 
     </motion.div>
   )
 }
 
-export default About
+export default Projects

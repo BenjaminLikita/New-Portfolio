@@ -2,17 +2,19 @@ import clsx from 'clsx'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaGithub, FaLinkedin, FaSquareXTwitter } from "react-icons/fa6"
+import { LinkProps } from '@/App'
 
 
 type NavbarProps = {
-  color: String,
-  small: Boolean,
-  page: Number
+  color?: String,
+  small?: Boolean,
+  page?: Number,
+  links: LinkProps[]
 }
 
-function NavBar({color, page, small}: NavbarProps) {
-  console.log(small);
-  
+
+
+function NavBar({color, page, small, links}: NavbarProps) {  
 
   const [click, setClick] = useState<Boolean>(false)
   const [active, setActive] = useState<Boolean>(false)
@@ -71,15 +73,11 @@ function NavBar({color, page, small}: NavbarProps) {
           "fade-out": !active,
         })}>
           <div className='flex flex-col transition-all fade-in text-sm md:text-xs z-50'>
-          <Link to={"/about-me"}
-          onClick={() => setClick(false)}
-          className='p-3 pl-0 border-b cursor-pointer hover:pl-3 transition-all duration-500 close'>About Me</Link>
-          <Link to={"/home"}
-          onClick={() => setClick(false)}
-          className='p-3 pl-0 border-b cursor-pointer hover:pl-3 transition-all duration-500 close'>Projects</Link>
-          <Link to={"/resume"}
-          onClick={() => setClick(false)}
-          className='p-3 pl-0 border-b cursor-pointer hover:pl-3 transition-all duration-500 close'>My Résumé</Link>
+            {links.map(link => (
+              <Link to={link.url}
+              onClick={() => setClick(false)}
+              className='p-3 pl-0 border-b cursor-pointer hover:pl-3 transition-all duration-500 close'>{link.text}</Link>
+            ))}
           </div>
       
           <div className='fade-in'>

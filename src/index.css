@@ -7,13 +7,6 @@
 @tailwind utilities;
  
 
-body{
-  background-color: rgb(32,33,36);
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
-}
 
 .fuggles{
   font-family: 'Fuggles', cursive;

@@ -6,10 +6,11 @@ interface Props {
     children: JSX.Element;
     width?: "fit-content" | "100%";
     animate: "slide-left" | "slide-right" | "slide-up" | "slide-down",
-    delay?: number
+    delay?: number,
+    className?: string
 }
 
-function Reveal({children, width = "fit-content", animate, delay = .15}: Props) {
+function Reveal({children, width = "fit-content", animate, delay = .15, className}: Props) {
 
     const ref = useRef(null)
     const isInView = useInView(ref)
@@ -66,6 +67,7 @@ function Reveal({children, width = "fit-content", animate, delay = .15}: Props) 
       initial="hidden"
       animate={mainControls}
       transition={{ duration: .8, delay: delay}}
+      className={className}
       >{children}</motion.div>
       {/* <motion.div
       variants={{

@@ -23,6 +23,20 @@ import { Link } from "react-router-dom"
 import { BsArrowRight } from "react-icons/bs"
 
 
+export const technologies = [
+  {url: html, language: "Html"},
+  {url: css, language: "Css"},
+  {url: js, language: "Javascript"},
+  {url: ts, language: "Typescript"},
+  {url: react, language: "React"},
+  {url: redux, language: "Redux"},
+  {url: nextjs, language: "Next"},
+  {url: nodejs, language: "NodeJs"},
+  {url: python, language: "Python"},
+  {url: django, language: "Django"},
+  {url: flask, language: "Flask"},
+]
+
 function Home() {
 
   const [page, setPage] = useState<number>(1)
@@ -30,19 +44,8 @@ function Home() {
   const [smallActive, setSmallActive] = useState<Boolean>(false)
   const colors = ["", "white", "blue", "white"]
 
-  const technologies = [
-    {url: html, language: "Html"},
-    {url: css, language: "Css"},
-    {url: js, language: "Javascript"},
-    {url: ts, language: "Typescript"},
-    {url: react, language: "React"},
-    {url: redux, language: "Redux"},
-    {url: nextjs, language: "Next"},
-    {url: nodejs, language: "NodeJs"},
-    {url: python, language: "Python"},
-    {url: django, language: "Django"},
-    {url: flask, language: "Flask"},
-  ]
+  
+  
   
   window.addEventListener("scroll", () => {
     if(window.scrollY > 10){
@@ -54,6 +57,25 @@ function Home() {
   })
   
   useEffect(() => {
+    
+    document.body.style.overflowX = `hidden`;
+    if(window.innerWidth > 768){
+      document.body.style.overflowY = `hidden`;
+    }
+    else{
+      document.body.style.overflowY = `visible`;
+    }
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768){
+        document.body.style.overflowY = `hidden`;
+      }
+      else{
+        document.body.style.overflowY = `visible`;
+      }
+      console.log(window.innerWidth);
+    })
+
+    
 
     setColor(colors[0]);
     setPage(1);
@@ -69,6 +91,10 @@ function Home() {
     })
   }, [])
 
+  const homeLinks = [
+    {url: "/projects", text: "Projects"},
+    {url: "/resume", text: "My Résumé"}
+  ]
 
   
 
@@ -77,12 +103,12 @@ function Home() {
   return (
     <div>
     <motion.div
-    // initial={{ x: 100, opacity: 0 }}
-    // animate={{ x: 0, opacity: 1 }}
-    // transition={{ duration: .8, type: "spring", bounce: .6 }}
+    // initial={{ opacity: 0, x: 200 }}
+    // animate={{ opacity: 1, x: 0 }}
+    // transition={{ duration: .7 }}
     >
 
-    <NavBar color={color} page={page} small={smallActive} />
+    <NavBar color={color} page={page} small={smallActive} links={homeLinks} />
 
     <div className="hidden fixed md:bottom-[25px] bottom-[45%] right-[65px] md:flex flex-col items-center gap-5 p-1 z-40">
       <div
@@ -148,14 +174,14 @@ function Home() {
     </section>
 
 
-    <section className='w-[100vw] h-[65vh] sm:h-[75vh] md:h-[100vh] bg-white'>
-      <div className="w-[70%] md:w-[80%] flex flex-col translate-x-[15%] translate-y-[15%] md:translate-y-[40%]">
+    <section className='w-[100vw] py-16 md:py-0 md:h-[100vh] bg-white'>
+      <div className="w-[80%] m-auto flex flex-col translate-x-0 translate-y-0 md:translate-y-[50%] xl:translate-y-[100%]">
         <div className="w-[100%] md:w-[50%]">
           <Reveal animate="slide-down">
             <h1 className="text-2xl md:text-4xl font-bold text-[#4831d4]">DESIGN</h1>
           </Reveal>
           <Reveal animate="slide-up">
-            <p className="text-sm lg:text-base leading-tight font-normal text-[#3D1558] mt-3">My creativity and attention to detail help me create visually appealing and impactful designs. I love bringing ideas to life through visuals and making them stand out. Let's create something amazing together! 🎨✨</p>
+            <p className="text-sm lg:text-base leading-tight font-normal text-[#3D1558] mt-3">My creativity and attention to detail helps me create visually appealing and impactful designs. I love bringing ideas to life through visuals and making them stand out. Let's create something amazing together! 🎨✨</p>
           </Reveal>
         </div>
         <div className="w-[100%] md:w-[50%] md:self-end pt-10">
@@ -163,7 +189,7 @@ function Home() {
             <h1 className="text-2xl md:text-4xl font-bold text-[#4831d4]">ENGINEERING</h1>
           </Reveal>
           <Reveal animate="slide-left">
-            <p className="text-sm lg:text-base leading-tight font-normal text-[#3D1558] mt-3">My problem-solving skills, attention to detail, and technical expertise allow me to create robust and efficient solutions. I thrive on challenges and enjoy finding innovative ways to tackle complex problems. Let's engineer greatness together! 🛠️🚀.</p>
+            <p className="text-sm lg:text-base leading-tight font-normal text-[#3D1558] mt-3">My problem-solving skills and technical expertise allows me to create robust and efficient solutions. I thrive on challenges and enjoy finding innovative ways to tackle complex problems. Let's engineer greatness together! 🛠️🚀.</p>
           </Reveal>
         </div>
         <img
@@ -175,8 +201,8 @@ function Home() {
       </div>
     </section>
 
-    <section className='w-[100vw] h-[75vh] sm:h-[100vh] bg-[#4831d4]'>
-      <div className="pt-[10%] md:pt-[5%] lg:pt-[10%] text-gray-100 w-[80%] m-auto">
+    <section className='w-[100vw] md:h-[100vh] bg-[#4831d4]'>
+      <div className="py-[10%] md:pt-[15%]  lg:py-[10%] text-gray-100 w-[80%] m-auto">
         <h1 className="text-3xl font-bold mb-2">TECHNOLOGIES</h1>
         <div className="grid grid-cols-3 md:grid-cols-5">
           {technologies.map((tech, i) => (
@@ -186,10 +212,10 @@ function Home() {
       </div>
     </section>
 
-    <section className='w-[100vw] h-[60vh] sm:h-[60vh] md:h-[100vh] bg-gray-50'>
-      <div className="bg-white px-8 sm:p-20 py-16 translate-y-[5vh] md:translate-y-[20vh] w-[90%] m-auto text-[#3e3198] relative">
+    <section className='w-[100vw] md:h-[100vh] bg-gray-50 grid place-items-center'>
+      <div className="bg-white py-5 md:py-16 my-10 w-[85%] md:w-fit  px-12 md:px-24 shadow md:translate-y-[10%]">
         
-        <div className=" md:h-[50vh] w-[100%] md:translate-x-[20%] md:translate-y-[25%] lg:translate-x-[30%] lg:translate-y-[20%]">
+        <div className="">
           <Reveal animate="slide-left">
             <div className="w-[100%]">
               <h1 className="text-[#3e3198] text-3xl md:text-4xl font-bold mb-[10%]">I build & design stuff</h1>
