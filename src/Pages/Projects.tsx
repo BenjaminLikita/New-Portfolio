@@ -18,6 +18,9 @@ function Projects() {
     transition={{ duration: .8, type: "spring", bounce: .6 }}
     >
       <NavBar links={projLinks}/>
+      <div className="w-[80%] m-auto pt-10">
+          <h1 className="text-3xl">Coming Soon...</h1>
+      </div>
 
     </motion.div>
   )
