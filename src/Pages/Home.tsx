@@ -221,7 +221,7 @@ function Home() {
               <h1 className="text-[#3e3198] text-3xl md:text-4xl font-bold mb-[10%]">I build & design stuff</h1>
               <p className="text-sm md:text-base">Open source projects, web apps and experimentals.</p>
               <Link
-              to={""}
+              to={"/projects"}
               className="border-[#4831d4] group flex justify-center text-xs md:text-base gap-5 items-center relative border px-3 sm:px-8 py-4 mt-5 before:bg-[#4831d4] before:absolute before:w-[0%] before:h-[100%] before:top-0 before:left-0 hover:before:w-[100%] before:transition-all duration-500 before:duration-700 hover:text-white before:z-[-1] delay[10ms] font-semibold text-[#4831d4]"
               >SEE MY WORKS<BsArrowRight size={25}/>
               </Link>
