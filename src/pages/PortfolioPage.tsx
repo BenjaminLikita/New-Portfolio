@@ -37,7 +37,7 @@ const PortfolioPage = () => {
             </div>
         </section>
 
-        <section className="bg-black-2 py-20 px-10">
+        <section className="bg-black-2 py-20 px-5">
             <span className="tracking-[3px] block text-[10px] font-semibold text-gray-2">STACKS</span>
             <p className="font-semibold text-lg">Technologies I Work With</p>
             <div className="pt-3">
@@ -54,7 +54,7 @@ const PortfolioPage = () => {
             </div>
         </section>
 
-        <section className="bg-gray1 bg-[#162C42] py-20 px-10 space-y-5">
+        <section className="bg-[#162C42] py-20 px-5 space-y-5">
             <span className="tracking-[3px] block text-[10px] font-semibold text-center text-gray-2">PROJECTS</span>
             <p className="font-semibold text-center text-lg">Check Out Some of My Recent Work</p>
             <div className="pt-3">
@@ -62,7 +62,7 @@ const PortfolioPage = () => {
             </div>
         </section>
 
-        <section className="bg-black-1 py-20 px-10 space-y-5 ">
+        <section className="bg-black-1 py-20 px-5 space-y-5 ">
             <div className="flex flex-col md:flex-row gap-5">
                 <div className="rounded-2xl p-5 bg-black-2 border-[2px] border-gray-1/10 space-y-3 flex-[3]">
                     <span className="text-sm">👋Hey, I'm</span>
@@ -92,7 +92,7 @@ const PortfolioPage = () => {
 
         </section>
 
-        <section className="h-56 bg-black-2">
+        <section className="h-56 bg-black-2 px-5 py-20">
              
         </section>
     </main>
