@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div className={`fixed left-[50%] -translate-x-[50%] bg-gray-1 text-white font-medium text-xl space-y-5 w-[95%] md:w-[80%] rounded-3xl border border-gray-2 m-auto py-7 px-10 z-[30] transition-all duration-700 ${isOpen ? "top-28 opacity-100" : "top-[-100%] opacity-0"}`}>
+      <div className={`fixed left-[50%] -translate-x-[50%] bg-gray-1 text-white font-medium text-xl space-y-5 w-[95%] md:w-[80%] rounded-3xl border border-gray-2 m-auto py-7 px-10 z-[30] transition-all duration-700 ${isOpen ? "top-20 opacity-100" : "top-[-100%] opacity-0"}`}>
         {
           links.map(({name}) => (
             <Link key={name} to={""} className="hover:text-secondary hover:border-b-secondary mx-10 border-b block text-center transition-all duration-300">{name}</Link>
