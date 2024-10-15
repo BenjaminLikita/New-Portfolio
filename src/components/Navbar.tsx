@@ -22,7 +22,7 @@ const Navbar = () => {
               <Link key={name} to={""} onClick={() => {
                 setIsOpen(false)
                 const element = document.getElementById(id)
-                if(element) element.scrollIntoView({ behavior: "smooth", block: "center" })
+                if(element) element.scrollIntoView({ behavior: "smooth" })
               }} className="hover:text-secondary transition-all duration-300">{name}</Link>
             ))
           }
@@ -40,8 +40,7 @@ const Navbar = () => {
               setIsOpen(false)
               const element = document.getElementById(id)
               element?.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
+                behavior: "smooth"
               })
             }} className="hover:text-secondary hover:border-b-secondary mx-10 border-b block text-center transition-all duration-300">{name}</Link>
           ))
