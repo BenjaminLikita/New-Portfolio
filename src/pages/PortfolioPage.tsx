@@ -121,7 +121,7 @@ const PortfolioPage = () => {
             <span className="tracking-[3px] block text-[10px] font-semibold text-center text-gray-2">PROJECTS</span>
             <p className="font-semibold text-center text-lg">Check Out Some of My Recent Work</p>
             <div className="pt-3">
-                project cards
+                coming soon...
             </div>
         </section>
 
@@ -148,7 +148,7 @@ const PortfolioPage = () => {
                     <div className="absolute top-[80%] [300px] left-[80%] [30px] size-[40px] border border-[#303c49] rounded-full"></div>
                     <div className="absolute bottom-[2%] left-[40%] [150px] h-[5px] w-[30px] bg-[#513119]"></div>
                     {/* doodles end */}
-                    <img src="./profile_pic.jpeg" className="rounded-full w-[50%] border-[4px] border-secondary" alt="profile_image" />
+                    <img src="./profile_pic.jpeg" className="rounded-full w-[50%] border-[4px] border-[#513119] brightness-75" alt="profile_image" />
                 </div>
             </div>
 
