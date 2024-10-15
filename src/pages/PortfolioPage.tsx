@@ -73,7 +73,7 @@ const PortfolioPage = () => {
         <Navbar />
         
         <section className="bg-black-1 grid place-items-center pt-36 pb-24 md:py-52 relative overflow-hidden" id="home">
-            {/* doodles */}
+            {/* doodles start */}
                 <div className="absolute top-[60px] left-[1%] [30px] h-[40px] w-[80px] border border-[#131d27] rounded-t-full rotate-[-60deg]"></div>
                 <div className="absolute top-[200px] left-[1%] [20px] size-[80px] bg-[#75797d] rounded-full"></div>
                 <div className="absolute top-[400px] left-[2%] [50px] h-[60px] w-[25px] border border-[#131d27]"></div>
@@ -91,8 +91,6 @@ const PortfolioPage = () => {
                 <div className="absolute top-[250px] left-[90%] [20px] size-[50px] border border-[#75797d] rounded-full"></div>
                 <div className="absolute top-[200px] left-[83%] [150px] size-[10px] bg-[#513119]"></div>
                 <div className="absolute top-[100px] left-[93%] [30px] h-[40px] w-[80px] bg-[#303c49] rounded-b-full rotate-[-30deg]"></div>
-                {/* <div className="fixed top-20 left-5 size-16 border border-gray-2"></div> */}
-
             {/* doodles end */}
             <div className="space-y-5 text-center w-[90%] m-auto z-0">
                 <span className="rounded-full border border-gray-2 p-2 tracking-[3px] text-[8px] md:text-[10px] font-bold text-gray-2">FULLSTACK DEVELOPER</span>
@@ -141,6 +139,7 @@ const PortfolioPage = () => {
                     </div>
                 </div>
                 <div className="rounded-2xl p-5 bg-black-2 border border-gray-2/10 space-y-3 flex-[2] grid place-items-center relative overflow-hidden">
+                    {/* doodles start */}
                     <div className="absolute top-[10%] [20px] left-[10%] [850px] size-10 border border-[#513119] before:size-10 before:absolute before:bg-[#303c49] before:top-[30%] before:right-[30%]"></div>
                     <div className="absolute top-[10%] [20px] left-[80%] [30px] h-[40px] w-[80px] bg-[#303c49] rounded-b-full rotate-[-30deg]"></div>
                     <div className="absolute top-[45%] [180px] left-[10%] [150px] size-[10px] bg-[#513119]"></div>
@@ -148,6 +147,7 @@ const PortfolioPage = () => {
                     <div className="absolute top-[50%] [180px] right-[-2%] [150px] size-[50px] bg-[#513119] rotate-[45deg]"></div>
                     <div className="absolute top-[80%] [300px] left-[80%] [30px] size-[40px] border border-[#303c49] rounded-full"></div>
                     <div className="absolute bottom-[2%] left-[40%] [150px] h-[5px] w-[30px] bg-[#513119]"></div>
+                    {/* doodles end */}
                     <img src="./profile_pic.jpeg" className="rounded-full w-[50%] border-[4px] border-secondary" alt="profile_image" />
                 </div>
             </div>
@@ -178,9 +178,9 @@ const PortfolioPage = () => {
                     </Link>
                 </div>
 
-                <hr className="h-[1px] md:h-[500px] w-[100%] md:w-[1px] bg-gray-2/20 border-none block " />
+                <hr className="h-[1px] md:h-[500px] w-[100%] md:w-[2px] bg-gray-2/20 border-none block " />
 
-                <div className="flex-grow">
+                <div className="flex-grow w-full">
                     <form onSubmit={onsubmit} className="space-y-5">
                         <div className="space-y-1">
                             <label htmlFor="name">Name</label>
