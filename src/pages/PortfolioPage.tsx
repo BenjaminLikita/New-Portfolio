@@ -1,7 +1,10 @@
 import Marquee from "react-fast-marquee"
-import {TbBrandJavascript, TbBrandTypescript, TbBrandReact, TbBrandNodejs, TbBrandVite, TbBrandNextjs, TbBrandGithub, TbBrandGit, TbBrandDocker, TbBrandHtml5, TbBrandLinkedin, TbBrandX} from "react-icons/tb"
+import {TbBrandJavascript, TbBrandTypescript, TbBrandReact, TbBrandNodejs, TbBrandVite, TbBrandNextjs, TbBrandGithub, TbBrandGit, TbBrandDocker, TbBrandHtml5, TbBrandLinkedin, TbBrandX, TbMail, TbBrandWhatsapp, TbBrandFigma} from "react-icons/tb"
 import {SiNestjs} from "react-icons/si"
 import { Link } from "react-router-dom"
+import { ChangeEvent, FormEvent, useState } from "react"
+import { toast } from "sonner"
+import Navbar from "../components/Navbar"
 
 
 
@@ -19,6 +22,7 @@ const PortfolioPage = () => {
         {title: "Git", icon: TbBrandGit},
         {title: "Github", icon: TbBrandGithub},
         {title: "Docker", icon: TbBrandDocker},
+        {title: "Figma", icon: TbBrandFigma},
     ]
 
     const socials = [
@@ -26,11 +30,72 @@ const PortfolioPage = () => {
         {name: "Github", icon: TbBrandGithub, link: "https://github.com/BenjaminLikita"},
         {name: "X", icon: TbBrandX, link: "https://github.com/BenjaminLikita"}
     ]
+
+    type IFormData = {
+        name: string
+        email: string
+        message: string
+    }
+
+    const [formData, setFormData] = useState<IFormData>(
+        {email: "", message: "", name:""}
+    )
+
+    const onsubmit = (e: FormEvent<HTMLFormElement>) => {
+        const promise = new Promise((res, rej) => {
+            const rand = Math.round(Math.random())
+            setTimeout(() => rand === 0 ? rej("") : res("") , 2000)
+        })
+        e.preventDefault()
+        toast.promise(promise, {
+            loading: "Sending...",
+            success: () => {
+                setFormData({email: "", message: "", name:""})
+                return "Sent succesfully"
+            },
+            error: () => "Something went wrong"
+        })
+    }
+
+    const onchange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const {id, value} = e.target
+
+        setFormData(prev => {
+            return {
+                ...prev,
+                [id]: value
+            }
+        })
+    }
+
   return (
     <main className="text-white">
-        <section className="bg-black-1 grid place-items-center pt-36 pb-24 md:py-52">
-            <div className="space-y-5 text-center w-[90%] m-auto">
-                <span className="rounded-full border-[2px] border-gray-2 p-2 tracking-[3px] text-[8px] md:text-[10px] font-bold text-gray-2">FULLSTACK DEVELOPER</span>
+        <Navbar />
+        
+        <section className="bg-black-1 grid place-items-center pt-36 pb-24 md:py-52 relative overflow-hidden" id="home">
+            {/* doodles */}
+                <div className="absolute top-[60px] left-[1%] [30px] h-[40px] w-[80px] border border-[#131d27] rounded-t-full rotate-[-60deg]"></div>
+                <div className="absolute top-[200px] left-[1%] [20px] size-[80px] bg-[#75797d] rounded-full"></div>
+                <div className="absolute top-[400px] left-[2%] [50px] h-[60px] w-[25px] border border-[#131d27]"></div>
+                <div className="absolute top-[200px] left-[13%] [250px] h-[20px] w-[7px] bg-[#513119]"></div>
+                <div className="absolute top-[290px] left-[12%] [220px] size-[3px] bg-[#75797d] rounded-full"></div>
+                <div className="absolute top-[380px] left-[13%] [250px] h-[4px] w-[50px] bg-[#513119]"></div>
+                <div className="absolute top-[510px] left-[15%] [180px] size-[80px] border border-[#131d27] rounded-full before:absolute before:size-[80px] before:border before:border-[#131d27] before:rounded-full before:bottom-[30%] before:left-[30%]"></div>
+                <div className="absolute top-[550px] left-[32%] [450px] size-[20px] bg-[#303c49]"></div>
+                <div className="absolute top-[550px] left-[45%] [650px] h-[5px] w-[15px] bg-[#513119]"></div>
+                <div className="absolute top-[500px] left-[60%] [850px] size-16 border border-[#303c49] before:size-16 before:absolute before:bg-[#513119] before:top-[30%] before:right-[30%]"></div>
+                <div className="absolute top-[500px] left-[78%] [1050px] size-[20px] border border-[#303c49]"></div>
+                <div className="absolute top-[420px] left-[90%] [1050px] size-[80px] border border-[#303c49]"></div>
+                <div className="absolute top-[380px] left-[83%] [150px] size-[60px] bg-[#513119]"></div>
+                <div className="absolute top-[350px] left-[95%] [20px] size-[30px] bg-[#75797d] rounded-full"></div>
+                <div className="absolute top-[250px] left-[90%] [20px] size-[50px] border border-[#75797d] rounded-full"></div>
+                <div className="absolute top-[200px] left-[83%] [150px] size-[10px] bg-[#513119]"></div>
+                <div className="absolute top-[100px] left-[93%] [30px] h-[40px] w-[80px] bg-[#303c49] rounded-b-full rotate-[-30deg]"></div>
+                {/* <div className="fixed top-20 left-5 size-16 border border-gray-2"></div> */}
+
+            {/* doodles end */}
+            <div className="space-y-5 text-center w-[90%] m-auto z-0">
+                <span className="rounded-full border border-gray-2 p-2 tracking-[3px] text-[8px] md:text-[10px] font-bold text-gray-2">FULLSTACK DEVELOPER</span>
                 <h1 className="font-bold text-4xl md:text-5xl">Benjamin Likita</h1>
                 <p className="w-[60%] text-center m-auto">I transform ideas into digital realities, focusing on creating unique and engaging experiences for users.</p>
                 <button className="bg-secondary py-3 px-5 rounded-full font-semibold">Reach out</button>
@@ -44,7 +109,7 @@ const PortfolioPage = () => {
                 <Marquee gradientWidth={"120px"} gradient gradientColor="#001122">
                     {
                         stacks.map(stack => (
-                            <div className="border border-gray-2 rounded-2xl size-[170px] md:size-[200px] flex flex-col justify-center items-center space-y-5 mx-5">
+                            <div key={stack.title} className="border border-gray-2 rounded-2xl size-[170px] md:size-[200px] flex flex-col justify-center items-center space-y-5 mx-5">
                                 <h1 className="text-secondary font-semibold text-lg md:text-xl">{stack.title}</h1>
                                 <stack.icon className="size-[40px] md:size-[50px]" strokeWidth="1" fill="transparent"  color="#F7770F" />
                             </div>
@@ -54,7 +119,7 @@ const PortfolioPage = () => {
             </div>
         </section>
 
-        <section className="bg-[#162C42] py-20 px-5 space-y-5">
+        <section className="bg-[#162C42] py-20 px-5 space-y-5" id="projects">
             <span className="tracking-[3px] block text-[10px] font-semibold text-center text-gray-2">PROJECTS</span>
             <p className="font-semibold text-center text-lg">Check Out Some of My Recent Work</p>
             <div className="pt-3">
@@ -62,9 +127,9 @@ const PortfolioPage = () => {
             </div>
         </section>
 
-        <section className="bg-black-1 py-20 px-5 space-y-5 ">
+        <section className="bg-black-1 py-20 px-5 space-y-5" id="about">
             <div className="flex flex-col md:flex-row gap-5">
-                <div className="rounded-2xl p-5 bg-black-2 border-[2px] border-gray-1/10 space-y-3 flex-[3]">
+                <div className="rounded-2xl p-5 bg-black-2 border border-gray-2/10 space-y-3 flex-[3]">
                     <span className="text-sm">👋Hey, I'm</span>
                     <h1 className="text-3xl font-semibold">Benjamin Likita</h1>
                     <div className="space-y-5 text-sm md:text-base">
@@ -75,15 +140,22 @@ const PortfolioPage = () => {
                         <p>I’m open to connecting and working with like-minded individuals to bring innovative ideas to life!</p>
                     </div>
                 </div>
-                <div className="rounded-2xl p-5 bg-black-2 border-[2px] border-gray-1/10 space-y-3 flex-[2] grid place-items-center">
-                        <img src="./profile_pic.jpeg" className="rounded-full w-[50%] border-[4px] border-secondary" alt="profile_image" />
+                <div className="rounded-2xl p-5 bg-black-2 border border-gray-2/10 space-y-3 flex-[2] grid place-items-center relative overflow-hidden">
+                    <div className="absolute top-[10%] [20px] left-[10%] [850px] size-10 border border-[#513119] before:size-10 before:absolute before:bg-[#303c49] before:top-[30%] before:right-[30%]"></div>
+                    <div className="absolute top-[10%] [20px] left-[80%] [30px] h-[40px] w-[80px] bg-[#303c49] rounded-b-full rotate-[-30deg]"></div>
+                    <div className="absolute top-[45%] [180px] left-[10%] [150px] size-[10px] bg-[#513119]"></div>
+                    <div className="absolute top-[70%] [240px] left-[10%] [30px] size-[40px] bg-[#303c49] rounded-full"></div>
+                    <div className="absolute top-[50%] [180px] right-[-2%] [150px] size-[50px] bg-[#513119] rotate-[45deg]"></div>
+                    <div className="absolute top-[80%] [300px] left-[80%] [30px] size-[40px] border border-[#303c49] rounded-full"></div>
+                    <div className="absolute bottom-[2%] left-[40%] [150px] h-[5px] w-[30px] bg-[#513119]"></div>
+                    <img src="./profile_pic.jpeg" className="rounded-full w-[50%] border-[4px] border-secondary" alt="profile_image" />
                 </div>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-3">
                 {
                     socials.map(social => (
-                        <Link to={social.link} className="border border-gray-1/20 rounded-xl flex justify-center items-center p-5 gap-3 hover:scale-105 transition-all duration-300 cursor-pointer bg-black-2">
+                        <Link to={social.link} key={social.name} className="border border-gray-2/20 rounded-xl flex justify-center items-center p-5 gap-3 hover:scale-105 transition-all duration-300 cursor-pointer bg-black-2">
                             <social.icon size={30} strokeWidth="1" fill="transparent" /><p>{social.name}</p>
                         </Link>
                     ))
@@ -92,8 +164,43 @@ const PortfolioPage = () => {
 
         </section>
 
-        <section className="h-56 bg-black-2 px-5 py-20">
-             
+        <section className="bg-black-2 px-5 py-20">
+            <div className="flex flex-col md:flex-row gap-10 items-center">
+
+                <div className="space-y-5">
+                    <h1 className="font-bold text-3xl">Let's talk?</h1>
+                    <p>If you have any questions, proposals, or just want to have a chat, feel free to get in touch.</p>
+                    <Link to={"mailto:benjaminlikita3@gmail.com"} className="border border-gray-2/20 rounded-xl flex justify-center items-center p-5 gap-3 hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <TbMail size={30} strokeWidth="1" /><p>Mail</p>
+                    </Link>
+                    <Link to={"https://wa.me/+2348104156868"} className="border border-gray-2/20 rounded-xl flex justify-center items-center p-5 gap-3 hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <TbBrandWhatsapp size={30} strokeWidth="1" /><p>Whatsapp</p>
+                    </Link>
+                </div>
+
+                <hr className="h-[1px] md:h-[500px] w-[100%] md:w-[1px] bg-gray-2/20 border-none block " />
+
+                <div className="flex-grow">
+                    <form onSubmit={onsubmit} className="space-y-5">
+                        <div className="space-y-1">
+                            <label htmlFor="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Insert your name" className="bg-gray-5 p-3 rounded-xl border border-gray-2/20 w-full" value={formData.name} onChange={onchange} required/>
+                        </div>
+
+                        <div className="space-y-1">
+                            <label htmlFor="email">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder="Insert your e-mail" className="bg-gray-5 p-3 rounded-xl border border-gray-2/20 w-full" value={formData.email} onChange={onchange} required/>
+                        </div>
+
+                        <div className="space-y-1">
+                            <label htmlFor="message">Message</label>
+                            <textarea rows={5} name="message" id="message" placeholder="Write your message" className="bg-gray-5 p-3 rounded-xl border border-gray-2/20 w-full resize-none" value={formData.message} onChange={onchange} required />
+                        </div>
+
+                        <input type="submit" value="Send Message" className="border border-gray-2/40 py-4 px-6 rounded-full hover:scale-105 transition-all duration-300 cursor-pointer" />
+                    </form> 
+                </div>
+            </div>
         </section>
     </main>
   )
