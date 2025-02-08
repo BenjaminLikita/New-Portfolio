@@ -1,9 +1,9 @@
+import { Navigate } from "react-router-dom"
+
 
 
 const ErrorPage = () => {
-  return (
-    <div>ErrorPage</div>
-  )
+  return <Navigate to="/" />
 }
 
 export default ErrorPage

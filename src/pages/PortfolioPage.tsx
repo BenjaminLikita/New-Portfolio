@@ -71,7 +71,7 @@ const PortfolioPage = () => {
 
   return (
     <main className="text-white">
-        <MotionConfig transition={{ duration: 2, type: 'spring' }}>
+        <MotionConfig transition={{ duration: 2, type: 'spring', bounce: 0.6 }}>
             <Navbar />
             
             <section className="bg-black-1 grid place-items-center pt-36 pb-24 md:py-52 relative overflow-hidden" id="home">
@@ -130,7 +130,7 @@ const PortfolioPage = () => {
             
             <section className="bg-black-1 py-20 px-5 space-y-5" id="about">
                 <div className="flex flex-col md:flex-row gap-5">
-                    <motion.div viewport={{ once: true }} initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} className="rounded-2xl p-5 bg-black-2 border border-gray-2/10 space-y-3 flex-[3]">
+                    <motion.div viewport={{ once: true, amount: .5 }} initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} className="rounded-2xl p-5 bg-black-2 border border-gray-2/10 space-y-3 flex-[3]">
                         <span className="text-sm">👋Hey, I'm</span>
                         <h1 className="text-3xl font-semibold">Benjamin Likita</h1>
                         <div className="space-y-5 text-sm md:text-base">
@@ -141,7 +141,7 @@ const PortfolioPage = () => {
                             <p>I’m open to connecting and working with like-minded individuals to bring innovative ideas to life!</p>
                         </div>
                     </motion.div>
-                    <motion.div viewport={{ once: true }} initial={{ x: 20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} className="rounded-2xl p-5 bg-black-2 border border-gray-2/10 space-y-3 flex-[2] grid place-items-center relative overflow-hidden">
+                    <motion.div viewport={{ once: true, amount: .5 }} initial={{ x: 20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} className="rounded-2xl p-5 bg-black-2 border border-gray-2/10 space-y-3 flex-[2] grid place-items-center relative overflow-hidden">
                         {/* doodles start */}
                         <div className="absolute top-[10%] [20px] left-[10%] [850px] size-10 border border-[#513119] before:size-10 before:absolute before:bg-[#303c49] before:top-[30%] before:right-[30%]"></div>
                         <div className="absolute top-[10%] [20px] left-[80%] [30px] h-[40px] w-[80px] bg-[#303c49] rounded-b-full rotate-[-30deg]"></div>
@@ -158,7 +158,7 @@ const PortfolioPage = () => {
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-3">
                     {
                         socials.map((social, idx) => (
-                            <motion.div viewport={{ once: true }} initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ delay: idx / 5 }}>
+                            <motion.div viewport={{ once: true, amount: .5 }} initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ delay: idx / 5, type: 'spring', bounce: .6 }}>
                                 <Link to={social.link} key={social.name} className="border border-gray-2/20 rounded-xl flex justify-center items-center p-5 gap-3 hover:scale-105 transition-all duration-300 cursor-pointer bg-black-2">
                                     <social.icon size={30} strokeWidth="1" fill="transparent" /><p>{social.name}</p>
                                 </Link>
@@ -171,7 +171,7 @@ const PortfolioPage = () => {
             <section className="bg-black-2 px-5 py-20">
                 <div className="flex flex-col md:flex-row gap-10 items-center">
 
-                    <motion.div viewport={{ once: true }} initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} className="space-y-5">
+                    <motion.div viewport={{ once: true, amount: .5 }} initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} className="space-y-5">
                         <h1 className="font-bold text-3xl">Let's talk?</h1>
                         <p>If you have any questions, proposals, or just want to have a chat, feel free to get in touch.</p>
                         <Link to={"mailto:benjaminlikita3@gmail.com"} className="border border-gray-2/20 rounded-xl flex justify-center items-center p-5 gap-3 hover:scale-105 transition-all duration-300 cursor-pointer">
@@ -184,7 +184,7 @@ const PortfolioPage = () => {
 
                     <hr className="h-[1px] md:h-[500px] w-[100%] md:w-[2px] bg-gray-2/20 border-none block " />
 
-                    <motion.div viewport={{ once: true }} initial={{ x: 20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} className="flex-grow w-full">
+                    <motion.div viewport={{ once: true, amount: .5 }} initial={{ x: 20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} className="flex-grow w-full">
                         <form onSubmit={onsubmit} className="space-y-5">
                             <div className="space-y-1">
                                 <label htmlFor="name">Name</label>
