@@ -171,8 +171,8 @@ const PortfolioPage = () => {
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-5 mb-0">
-                                        <Link to={githubUrl} className="font-light flex items-center gap-1 border-b"><TbBrandGithub /> Github</Link>
-                                        <Link to={link} className="font-light flex items-center gap-1 border-b"><TbLink /> Live url</Link>
+                                        <Link to={githubUrl} target="_blank" className="font-light flex items-center gap-1 border-b"><TbBrandGithub /> Github</Link>
+                                        <Link to={link} target="_blank" className="font-light flex items-center gap-1 border-b"><TbLink /> Live url</Link>
                                     </div>
                                 </div>
                             </div>
