@@ -1,11 +1,13 @@
 import Marquee from "react-fast-marquee"
-import {TbBrandJavascript, TbBrandTypescript, TbBrandReact, TbBrandNodejs, TbBrandVite, TbBrandNextjs, TbBrandGithub, TbBrandGit, TbBrandDocker, TbBrandHtml5, TbBrandLinkedin, TbBrandX, TbMail, TbBrandWhatsapp, TbBrandFigma} from "react-icons/tb"
+import {TbBrandJavascript, TbBrandTypescript, TbBrandReact, TbBrandNodejs, TbBrandVite, TbBrandNextjs, TbBrandGithub, TbBrandGit, TbBrandDocker, TbBrandHtml5, TbBrandLinkedin, TbBrandX, TbMail, TbBrandWhatsapp, TbBrandFigma, TbLink} from "react-icons/tb"
 import {SiNestjs} from "react-icons/si"
 import { Link } from "react-router-dom"
 import { ChangeEvent, FormEvent, useState } from "react"
 import { toast } from "sonner"
 import Navbar from "../components/Navbar"
 import { motion, MotionConfig } from 'motion/react'
+import pronotes from '../assets/pronotes.png'
+import tictactoePied from '../assets/tictactoe-pied.png'
 
 
 export const scrollToContact = () => {
@@ -75,6 +77,25 @@ const PortfolioPage = () => {
         })
     }
 
+    const projects = [
+        {
+            title: "Pro Notes",
+            description: "Pro Notes is a note-taking app that allows users to create, edit, and delete notes. It also supports speech to textfunctionality on web browsers that support the feature.",
+            image: pronotes,
+            githubUrl: "https://github.com/BenjaminLikita/pro-notes",
+            link: "https://pro-notes-beta.vercel.app/",
+            stacks: ["React", "Vite", "TypeScript"]
+        },
+        {
+            title: "Tictactoe Pied",
+            description: "Tictactoe Pied is a simple tictactoe game built with React, Vite, and TypeScript. It features a responsive design and a simple AI that makes the game more challenging.",
+            image: tictactoePied,
+            githubUrl: "https://github.com/BenjaminLikita/tictactoe",
+            link: "https://tictactoe-pied3.vercel.app/",
+            stacks: ["React", "Vite", "TypeScript"]
+        },
+    ]
+
   return (
     <main className="text-white">
         <MotionConfig transition={{ duration: 2, type: 'spring', bounce: 0.6 }}>
@@ -128,8 +149,35 @@ const PortfolioPage = () => {
             <section className="bg-[#162C42] py-20 px-5 space-y-5" id="projects">
                 <span className="tracking-[3px] block text-[10px] font-semibold text-center text-gray-2">PROJECTS</span>
                 <p className="font-semibold text-center text-lg">Check Out Some of My Recent Work</p>
-                <div className="pt-3">
-                    coming soon...
+                <div className="pt-3 flex flex-col gap-3">
+                    {
+                        projects.map(({ description, image, link, githubUrl, stacks, title }) => (
+                            <div key={title} className="border border-gray-2/20 rounded-2xl p-5 bg-black-2 flex flex-col md:flex-row gap-5">
+                                <div className="flex-[1] rounded-xl overflow-hidden">
+                                    <img src={image} className="object-cover h-[100%]" alt={title} />
+                                </div>
+                                <div className="flex flex-col flex-[2] space-y-3 gap-10 ustify-between">
+                                    <div className="flex flex-col space-y-3">
+                                        <h1 className="font-normal md:font-medium text-xl md:text-3xl">{title}</h1>
+                                        <p className="text-sm md:text-base">{description}</p>
+                                        <div className="flex items-center gap-3">
+                                            {
+                                                stacks.map(stack => (
+                                                    <span className="py-2 px-4 rounded-full border font-light text-sm overflow-hidden" key={stack}>
+                                                        {stack}
+                                                    </span>
+                                                ))
+                                            }
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-5 mb-0">
+                                        <Link to={githubUrl} className="font-light flex items-center gap-1 border-b"><TbBrandGithub /> Github</Link>
+                                        <Link to={link} className="font-light flex items-center gap-1 border-b"><TbLink /> Live url</Link>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </section>
 
