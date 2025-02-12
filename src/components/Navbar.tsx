@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import close from "../assets/xmark-solid.svg"
 import menu from "../assets/bars-solid.svg"
 import { motion } from "motion/react"
+import { scrollToContact } from "../pages/PortfolioPage"
 
 
 const Navbar = () => {
@@ -28,7 +29,9 @@ const Navbar = () => {
             ))
           }
         </div>
-        <Link to={""} className="bg-secondary text-white py-3 px-5 rounded-full font-semibold hidden md:inline-block">Reach out</Link>
+        {/* <Link to={""} className="bg-secondary text-white py-3 px-5 rounded-full font-semibold hidden md:inline-block">Reach out</Link> */}
+        <motion.button initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="bg-secondary text-white py-3 px-5 rounded-full font-semibold hidden md:inline-block" onClick={scrollToContact}>Reach out</motion.button>
+        {/* <motion.button initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="bg-secondary inline-block md:hidden py-3 px-5 rounded-full font-semibold" onClick={scrollToContact}>Reach out</motion.button> */}
         <div className="block md:hidden">
           {isOpen ? <img src={close} className="size-[30px] cursor-pointer" alt="close" onClick={() => setIsOpen(false)} /> : <img src={menu} className="size-[30px] cursor-pointer" alt="menu" onClick={() => setIsOpen(true)} />}
         </div>

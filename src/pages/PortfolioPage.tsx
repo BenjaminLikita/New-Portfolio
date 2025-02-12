@@ -8,6 +8,12 @@ import Navbar from "../components/Navbar"
 import { motion, MotionConfig } from 'motion/react'
 
 
+export const scrollToContact = () => {
+    const contactSection = document.getElementById('contact')
+    contactSection?.scrollIntoView({
+        behavior: 'smooth'
+    })
+}
 
 const PortfolioPage = () => {
 
@@ -98,7 +104,7 @@ const PortfolioPage = () => {
                     <motion.span initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }}  className="inline-block rounded-full border border-gray-2 p-2 tracking-[3px] text-[8px] md:text-[10px] font-bold text-gray-2">FULLSTACK DEVELOPER</motion.span>
                     <motion.h1 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="font-bold text-4xl md:text-5xl">Benjamin Likita</motion.h1>
                     <motion.p initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="w-[60%] text-center m-auto">I transform ideas into digital realities, focusing on creating unique and engaging experiences for users.</motion.p>
-                    <motion.button initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="bg-secondary py-3 px-5 rounded-full font-semibold">Reach out</motion.button>
+                    <motion.button initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="bg-secondary inline-block md:hidden py-3 px-5 rounded-full font-semibold" onClick={scrollToContact}>Reach out</motion.button>
                 </div>
             </section>
 
@@ -168,7 +174,7 @@ const PortfolioPage = () => {
                 </div>
             </section>
 
-            <section className="bg-black-2 px-5 py-20">
+            <section className="bg-black-2 px-5 py-20" id="contact">
                 <div className="flex flex-col md:flex-row gap-10 items-center">
 
                     <motion.div viewport={{ once: true, amount: .5 }} initial={{ x: -20, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} className="space-y-5">
