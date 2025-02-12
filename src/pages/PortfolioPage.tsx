@@ -152,7 +152,7 @@ const PortfolioPage = () => {
                 <div className="pt-3 flex flex-col gap-3">
                     {
                         projects.map(({ description, image, link, githubUrl, stacks, title }) => (
-                            <div key={title} className="border border-gray-2/20 rounded-2xl p-5 bg-black-2 flex flex-col md:flex-row gap-5">
+                            <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ type: 'spring', bounce: 0.4 }} viewport={{ amount: 0.4, once: true }} key={title} className="border border-gray-2/20 rounded-2xl p-5 bg-black-2 flex flex-col md:flex-row gap-5">
                                 <div className="flex-[1] rounded-xl overflow-hidden">
                                     <img src={image} className="object-cover h-[100%]" alt={title} />
                                 </div>
@@ -175,7 +175,7 @@ const PortfolioPage = () => {
                                         <Link to={link} target="_blank" className="font-light flex items-center gap-1 border-b"><TbLink /> Live url</Link>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))
                     }
                 </div>
