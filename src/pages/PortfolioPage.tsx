@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar"
 import { motion, MotionConfig } from 'motion/react'
 import pronotes from '../assets/pronotes.png'
 import tictactoePied from '../assets/tictactoe-pied.png'
+import shortly from '../assets/short-ly.png'
 
 
 export const scrollToContact = () => {
@@ -93,6 +94,14 @@ const PortfolioPage = () => {
             githubUrl: "https://github.com/BenjaminLikita/tictactoe",
             link: "https://tictactoe-pied3.vercel.app/",
             stacks: ["React", "Vite", "TypeScript"]
+        },
+        {
+            title: "Short-ly",
+            description: "Short-ly is a URL shortening service that allows users to shorten long URLs for easier sharing and tracking.",
+            image: shortly,
+            githubUrl: "https://github.com/BenjaminLikita/short-ly",
+            link: "https://shortt-ly.vercel.app/",
+            stacks: ["Next", "TypeScript", "Prisma", "Sqlite"]
         },
     ]
 
